@@ -1,4 +1,4 @@
-# Emails-Sent-by-Month
+# Email Activity Analysis by Account and Month
 This project analyzes email activity by calculating the percentage of emails sent to each account relative to the total emails sent in a given month. It also identifies the first and last email dates for each account per month.  
 
 **Key Features**  
