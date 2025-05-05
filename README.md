@@ -1,14 +1,23 @@
-# Email Activity Analysis by Account and Month
-This project analyzes email activity by calculating the percentage of emails sent to each account relative to the total emails sent in a given month. It also identifies the first and last email dates for each account per month.  
+# Monthly Email Sending Activity by Account
 
-**Key Features**  
-- Calculation of the monthly percentage of emails per account
-- Identification of the first and last email dates for each account within a month
-- Utilization of SQL window functions for efficient time-based analysis
+This project analyzes monthly email-sending behavior across user accounts. It calculates each account's contribution to the total email volume for a given month and identifies their first and last email send dates.
 
-**Technologies Used**
-- SQL (with window functions)
-- Data analysis tools
+## Key Insights
 
-**Purpose**  
-This analysis helps track user engagement patterns and communication frequency over time.
+- **Percentage of Emails Sent per Account per Month**  
+- **First and Last Email Dates** per account in each month  
+- **Monthly Trends in Email Activity** across all users  
+
+## How It Works
+
+The query uses:
+- **Window functions** to compute rolling metrics like count, min, and max dates  
+- **Date manipulation** (via `DATE_ADD` and `DATE_TRUNC`) to align data by calendar month  
+- **Deduplication** (`DISTINCT`) to ensure clean output per account-month pair
+
+## Use Cases
+
+- Monitoring **email campaign reach per user**  
+- Understanding **user re-engagement cycles**  
+- Identifying **inactivity periods**  
+- Supporting segmentation and retention analysis
